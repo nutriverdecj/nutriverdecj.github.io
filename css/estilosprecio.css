@@ -1,0 +1,137 @@
+:root{
+
+    /*   
+  las variables llevan doble guión y dos puntos
+    */
+    --color1: rgb(172, 150, 50);
+    --color2: rgba(180, 23, 88, 0.877);
+    --color3: rgba(73, 23, 80, 0.623);
+    --fondo: #cbdaec;
+    --titulos: 33px;
+    --margenes: 300px;
+    --espacios: 10px;
+    --espacios-contenido:45px;
+  }
+  
+  /*el asterisco hace referencia a TODO*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'open sans';
+    background: var(--fondo);
+  }
+  
+  img{
+    vertical-align: top;
+  }
+  
+  
+  
+  
+  /* Header 
+  con linear-gradient obtengo un degradado
+  con url obtengo la ruta de mi imagen de fondo
+  background-size: cover sirve adaptar la imagen al
+  tamaño del header o la caja donde esté.
+   background-position: center posiciona más hacia el centro
+   la imagen.
+  */
+  
+  header{
+    width: 100%;
+    height:600px;
+    background: linear-gradient(to bottom,
+    rgba(40, 238, 122, 0.856),
+    rgba(44, 131, 169 , 0.876),
+    rgba(167, 44, 169 , 0.445)
+    ), url(img/fondo\ logo3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  nav{
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(26, 54, 125, 0.481);
+  }
+  
+  .nav1{
+    background: transparent;
+    height: 80px;
+    color:#fff; /*color del texto dentro de este nav*/
+  }
+  
+  .nav2{ /*esto se aplicará cuando se use Javascript*/
+    background: var(--fondo);
+    height:100px;
+    color:#000; /*color del texto dentro de este segundo estilo para el nav*/
+  }
+  
+  .contenedor-nav{
+    display: flex; /*permite que en vez de que cada caja
+    ocupe un renglón que es lo típico en HTML, los elementos
+    se muestren uno al lado del otro */
+    margin: auto; /*pone márgenes automáticas por derecha e izquierda*/
+    width: 70%; /*es el ancho de la caja */
+    justify-content: space-between; /*espacio adecuado entre el
+    logo, la caja de los links y el icono de 3 rayitas*/
+    align-items: center;  /*Los elementos se centran automáticamente con respecto a la parte superior e inferior del contenedor, es decir, en el eje y*/
+    max-width:1000px;
+    height:inherit;
+    overflow: hidden;
+  }
+  
+  /*a continuacióne estilos para los links del nav */
+  /*por favor explique las líneas principales*/
+  
+  nav .enlaces a{  /*sigue una herencia */
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px; /*tamaño de fuente  */
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit; /*se hereda el color de texto del nav como se definió ya en nav1*/
+  }
+
+  nav .enlaces a:hover{
+    border-bottom: 3px solid #1512ce;
+    transition: 0.9s; /* cambio el tiempo que tarda en realizar el efecto*/
+  }
+
+  .logo, .logo img{
+    height:80px;
+  }
+  
+  /*el icono de las 3 rayitas solo debería aparecer
+  si la pantalla se vuelve pequeña para desplegar el menú */
+  .icono{
+    display:none; /*lo oculta */
+    font-size: 24px;
+    padding: 23.5px 20px;
+  }
+
+  .img-work{
+    height: 70%;
+    width: 50%;
+  
+    
+  }
+  
+  .img-work img{
+    height: 50%;
+    width: 50%;
+  }
+
+  .texto{
+    display: flex;
+    width: 50%;
+    height: 50%;
+  }
+
